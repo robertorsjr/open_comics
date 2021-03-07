@@ -1,13 +1,35 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background: linear-gradient(0deg, rgba(14 62 57 / 80%), rgba(41, 51, 50, 0.8)), ${({ image }) => `url(${image})`};
   width: 800px;
   height: 300px;
   max-height: 300px;
+`
+
+export const Wrapper = styled.div`
+  position:absolute;
+  z-index:999 ;
+`
+
+export const BackImage = styled.div`
+  position: absolute;
+  width: 800px;
+  height: 300px;
+  max-height: 300px;
+  background:${({ image }) => `url(${image})`};
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
+  z-index:2;
+`
+
+export const Opacity = styled.div`
+  position:absolute;
+  width: 800px;
+  height: 300px;
+  max-height: 300px;
+  background: rgba(48, 67, 74,.9);
+  z-index:5;
 `
 
 export const Row = styled.div`

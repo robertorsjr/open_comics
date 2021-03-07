@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, HorizonScroll, Latest} from '../../components';
 import { Container } from './styles'
 
-function HomePage() {
+function Home() {
   return (
     <Container>
         <Header/>
@@ -12,4 +12,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Home;

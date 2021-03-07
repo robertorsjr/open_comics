@@ -5,3 +5,6 @@ export { default as HorizonScroll } from './HorizonScroll'
 export { default as Latest } from './Latest'
 export { default as Search } from './Search'
 export { default as ShowLast } from './ShowLast'
+export { default as Menu } from './Menu'
+export { default as Separator } from './Separator'
+

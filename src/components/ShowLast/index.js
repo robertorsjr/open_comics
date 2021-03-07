@@ -9,13 +9,13 @@ import {
 
 function ShowLast({title, issue, subtitle, description, hendleClick }) {
   return(
-      <ShowBox >
-          <ShowTitle >{title} #{issue}</ShowTitle>  
-          <ShowSubTitle>{subtitle && subtitle}</ShowSubTitle>
-          <ShowDescription>{description && description} </ShowDescription>
-          <Button bkcolor={'#FFFFFF'} collor={'#0277BD'} text={'Read'} hendleClick={hendleClick}/>  
-      </ShowBox>
-  ) ;
+    <ShowBox >
+      <ShowTitle >{title} #{issue}</ShowTitle>  
+      <ShowSubTitle>{subtitle && subtitle}</ShowSubTitle>
+      <ShowDescription>{description && description} </ShowDescription>
+      <Button bkcolor={'#FFFFFF'} collor={'#0277BD'} text={'Read'} hendleClick={hendleClick}/>  
+    </ShowBox>
+  );
 }
 
 export default ShowLast;
