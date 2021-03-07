@@ -21,8 +21,8 @@ export const ShowTitle = styled.div`
 `
 
 export const ShowSubTitle = styled.div`
-  width: 300px;
-  height: 50px;
+  width: 500px;
+  height: 60px;
   font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 600;

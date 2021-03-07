@@ -1,5 +1,5 @@
 import React,{ useState, useEffect } from 'react';
-import { Header } from '../../components';
+import { CartazMovie, Header, Separator, Row } from '../../components';
 import { Container, Content } from './styles'
 import {getMovies} from '../../services/movies'
 
@@ -10,13 +10,12 @@ function Movies() {
   const [limit, setLimit] = useState('1')
  
   useEffect(()=>{
-     async function fetchComics(){
+     async function fetchMovies(){
        const response = await getMovies(limit)
        setMovies(response.data)    
      }
-     fetchComics()
+     fetchMovies()
   },[limit])
-
 
   function hendleClick(){
     setLimit('1')
@@ -25,7 +24,18 @@ function Movies() {
   return (
     <Container>
         <Header items={movies} hendleClick={hendleClick}/>
-        <Content/>
+        <Content>
+          <Row>
+            {
+              movies.results && movies.results.map(movie => 
+                <CartazMovie 
+                  item={movie}
+                />
+              )
+            }
+          </Row>
+          <Separator y={56}/>
+        </Content>
     </Container>
   );
 }
