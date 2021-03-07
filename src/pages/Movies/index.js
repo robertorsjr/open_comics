@@ -1,17 +1,20 @@
 import React,{ useState, useEffect } from 'react';
-import { CartazMovie, Header, Separator, Row } from '../../components';
-import { Container, Content } from './styles'
-import {getMovies} from '../../services/movies'
-
+import { CartazMovie, Header, Separator } from '../../components';
+import { Container, Content, Wrapper } from './styles'
+import { getMovies, getMovie} from '../../services/movies'
 
 function Movies() {
 
+  const [movie, setMovie] = useState({})
   const [movies, setMovies] = useState({})
   const [limit, setLimit] = useState('1')
+  const [size, setSize] = useState('9')
  
   useEffect(()=>{
      async function fetchMovies(){
-       const response = await getMovies(limit)
+       const response = await getMovies(size)
+       const resp = await getMovie(limit)
+       setMovie(resp.data)
        setMovies(response.data)    
      }
      fetchMovies()
@@ -23,18 +26,17 @@ function Movies() {
 
   return (
     <Container>
-        <Header items={movies} hendleClick={hendleClick}/>
+        <Header items={movie} hendleClick={hendleClick}/>
         <Content>
-          <Row>
+          <Wrapper>
             {
-              movies.results && movies.results.map(movie => 
-                <CartazMovie 
-                  item={movie}
-                />
+              movies.results && movies.results.map((movie, index) => 
+                <Separator y={340} x={176}>
+                  <CartazMovie key={index} item={movie}/>
+                </Separator>       
               )
             }
-          </Row>
-          <Separator y={56}/>
+          </Wrapper>
         </Content>
     </Container>
   );

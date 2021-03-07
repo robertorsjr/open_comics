@@ -33,7 +33,7 @@ export const Opacity = styled.div`
   width: 173px;
   height: 258px;
   max-height: 258px;
-  background: rgba(3, 1, 3,.9);
+  background: rgba(3, 1, 3,.8);
   z-index:5;
 `
 export const Relesed = styled.span`
