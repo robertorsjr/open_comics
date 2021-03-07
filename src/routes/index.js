@@ -1,5 +1,7 @@
 import React from "react";
 import Home from '../pages/Home'
+import Movies from '../pages/Movies'
+import NewComics from '../pages/NewComics'
 import {
   Switch,
   Route,
@@ -8,9 +10,9 @@ import {
 function Routes() {
   return (
     <Switch>
-      <Route path='/movies'/>
-      <Route path='/newcomics'/>
-      <Route path='/' component={Home}/>
+      <Route path='/movies' component={Movies}/>
+      <Route path='/newcomics'component={NewComics}/>
+      <Route path='/' component={Home} exact/>
     </Switch>
   );
 }

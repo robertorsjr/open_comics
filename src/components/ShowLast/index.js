@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../components/Button'
+import Button from '../Button'
 import {
   ShowBox,
   ShowTitle,
@@ -10,7 +10,10 @@ import {
 function ShowLast({title, issue, subtitle, description, hendleClick }) {
   return(
     <ShowBox >
-      <ShowTitle >{title} #{issue}</ShowTitle>  
+      {
+        issue ? <ShowTitle >{title} #{ issue}</ShowTitle>
+        : <ShowTitle>{title}</ShowTitle>
+      }
       <ShowSubTitle>{subtitle && subtitle}</ShowSubTitle>
       <ShowDescription>{description && description} </ShowDescription>
       <Button bkcolor={'#FFFFFF'} collor={'#0277BD'} text={'Read'} hendleClick={hendleClick}/>  

@@ -1,9 +1,9 @@
-import React,{useEffect,useState} from 'react';
+import React, { useEffect } from 'react';
 import Search from '../../components/Search';
 import ShowLast from '../../components/ShowLast'
 import Menu from '../../components/Menu';
 import Separator from '../../components/Separator'
-import {getLastsComics} from '../../services/lastsComics'
+import { useLocation } from 'react-router-dom'
 import {
   Container,
   Row,
@@ -14,29 +14,18 @@ import {
   Opacity
 } from './styles'
 
-function Header() {
+function Header({ items, hendleClick}) {
 
-  const [comics, setComics] = useState({})
-  const [limit, setLimit] = useState('1')
- 
-  useEffect(()=>{
-     async function fetchComics(){
-       const response = await getLastsComics(limit)
-       setComics(response.data)    
-     }
-     fetchComics()
-  },[limit])
+  let location = useLocation();
 
-  function hendleClick(){
-    setLimit('1')
-  }
+  useEffect(()=>[location])
 
   return (
     <>
       { 
-        comics.results && comics.results.map((comic, index) =>
+        items.results && items.results.map((item, index) =>
           <Container key={index}>
-            <BackImage image={comic.image.original_url}/>
+            <BackImage image={item.image.original_url}/>
             <Opacity/>
             <Wrapper>
               <Row >
@@ -46,14 +35,36 @@ function Header() {
                 <Menu/>
                 <Separator x={39}/>
                 <Search/>
-              </Row>         
+              </Row>
+              {
+                location.pathname === '/' &&  
                 <ShowLast 
                   hendleClick={hendleClick}
-                  title={comic.volume.name}
-                  issue={comic.issue_number}
-                  subtitle={comic.name}
-                  description={comic.description}
-                />  
+                  title={item.volume.name }
+                  issue={item.issue_number}
+                  subtitle={item.name}
+                  description={item.description}
+                />
+              }
+              {
+                location.pathname === '/newcomics' && 
+                <ShowLast 
+                  hendleClick={hendleClick}
+                  title={item.volume.name }
+                  issue={item.issue_number}
+                  subtitle={item.name}
+                  description={item.description}
+                />
+              }
+              {
+                location.pathname === '/movies' &&
+                <ShowLast 
+                  hendleClick={hendleClick}
+                  title={item.name }
+                  subtitle={item.deck}
+                  description={item.description}
+                /> 
+              }         
             </Wrapper>
           </Container>          
         )

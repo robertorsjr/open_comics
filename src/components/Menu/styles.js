@@ -15,6 +15,7 @@ export const About = styled.span`
   font-style: normal;
   font-weight: 600;
   color:#FFFFFF;
+  opacity:${({opacity}) => opacity || 50}%;
   font-size: 12px;
   line-height: 16px;
   display: flex;

@@ -1,23 +1,27 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import { Wrapper, Navigator, About } from './styles';
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
  
 function Menu() {
+  let location = useLocation();
+
+  useEffect(()=>[location])
+
   return (
     <Navigator>
       <Wrapper>
         <Link to='./' style={{textDecoration: 'none'}}>
-          <About>Home</About>
+          <About opacity={location.pathname === '/' ? '100' : null}>Home</About>
         </Link>
       </Wrapper>
       <Wrapper>
         <Link to='./newcomics'style={{textDecoration: 'none'}}>
-          <About>New Comics</About>
+          <About opacity={location.pathname === '/newcomics' ? '100' : null}>New Comics</About>
         </Link>
       </Wrapper>
       <Wrapper>
         <Link to='./movies'style={{textDecoration: 'none'}}>
-          <About>Movies</About>
+          <About opacity={location.pathname === '/movies' ? '100' : null}>Movies</About>
         </Link>
       </Wrapper>
     </Navigator>  
