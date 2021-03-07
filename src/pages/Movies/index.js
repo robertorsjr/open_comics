@@ -31,8 +31,8 @@ function Movies() {
           <Wrapper>
             {
               movies.results && movies.results.map((movie, index) => 
-                <Separator y={340} x={176}>
-                  <CartazMovie key={index} item={movie}/>
+                <Separator y={340} x={176} key={index}>
+                  <CartazMovie item={movie}/>
                 </Separator>       
               )
             }
