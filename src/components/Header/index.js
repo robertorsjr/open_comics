@@ -35,8 +35,8 @@ function Header() {
     <>
       { 
         comics.results && comics.results.map((comic, index) =>
-          <Container>
-            <BackImage key={index} image={comic.image.original_url}/>
+          <Container key={index}>
+            <BackImage image={comic.image.original_url}/>
             <Opacity/>
             <Wrapper>
               <Row >
@@ -49,7 +49,6 @@ function Header() {
               </Row>         
                 <ShowLast 
                   hendleClick={hendleClick}
-                  key={comic.issue_number}
                   title={comic.volume.name}
                   issue={comic.issue_number}
                   subtitle={comic.name}
