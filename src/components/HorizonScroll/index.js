@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import ComicViewer from '../../components/ComicViewer'
+import Separator from '../../components/Separator'
 import {getBatman} from '../../services/batman'
 import {
   Container,
@@ -34,15 +35,14 @@ function HorizonScroll() {
       </Row>
       <ComicContent>
         {
-          batman.results && batman.results.map((comic, index) => 
-            <ComicViewer 
-              key={index}
-              image={comic.image.original_url}
-              date={comic.cover_date}
-              title={comic.volume.name}
-              issue={comic.issue_number}
-              description={comic.name}
-            />
+          batman.results && batman.results.map((comic, index) =>
+                <ComicViewer 
+                image={comic.image.original_url}
+                date={comic.cover_date}
+                title={comic.volume.name}
+                issue={comic.issue_number}
+                description={comic.name}
+              />
           )
         }    
       </ComicContent>

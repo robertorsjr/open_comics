@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 173px;
   height: 258px;
+  border-radius: 4px;
+  cursor:pointer;
 `
 
 export const Wrapper = styled.div`
@@ -13,7 +15,8 @@ export const Wrapper = styled.div`
   width: 133px;
   height: 233px;
   justify-content:space-between;
-  flex-direction:column;  
+  flex-direction:column; 
+  border-radius: 4px; 
 `
 
 export const BackImage = styled.div`
@@ -26,6 +29,7 @@ export const BackImage = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   z-index:2;
+  border-radius: 4px;
 `
 
 export const Opacity = styled.div`
@@ -35,6 +39,7 @@ export const Opacity = styled.div`
   max-height: 258px;
   background: rgba(3, 1, 3,.8);
   z-index:5;
+  border-radius: 4px;
 `
 export const Relesed = styled.span`
   font-family: 'Nunito Sans';

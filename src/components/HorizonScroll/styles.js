@@ -46,6 +46,7 @@ export const ComicContent = styled.div`
   height:auto;
   display:flex;
   align-items:center;
+  justify-content:space-between;
   margin-top: 12px;
   margin-left: 27px;
   overflow:overlay;

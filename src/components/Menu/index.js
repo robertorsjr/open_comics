@@ -1,4 +1,4 @@
-import React,{ useEffect } from 'react';
+import React from 'react';
 import { Wrapper, Navigator, About } from './styles';
 import { Link, useLocation } from 'react-router-dom'
  

@@ -2,6 +2,7 @@ import React,{ useState, useEffect } from 'react';
 import { Header, ShowContent } from '../../components';
 import { Container } from './styles'
 import { getMovies, getMovie} from '../../services/movies'
+import { useLocation } from 'react-router-dom'
 
 function Movies() {
 
@@ -9,6 +10,7 @@ function Movies() {
   const [movies, setMovies] = useState({})
   const [limit, setLimit] = useState('1')
   const [size, setSize] = useState('9')
+  const [location, setLocation] = useState(useLocation())
  
   useEffect(()=>{
      async function fetchMovies(){
@@ -18,7 +20,7 @@ function Movies() {
        setMovies(response.data)    
      }
      fetchMovies()
-  },[limit])
+  },[limit, location])
 
   function handleClick(){
     setLimit('1')
@@ -27,7 +29,7 @@ function Movies() {
   return (
     <Container>
       <Header items={movie} handleClick={handleClick}/>
-      <ShowContent items={movies}/>
+      <ShowContent items={movies} location={location.pathname}/>
     </Container>
   );
 }

@@ -6,7 +6,8 @@ import {
   ContentWraper,
   AboutText,
   Container,
-  ReadButton
+  ReadButton,
+  VectorIcon
 } from './styles'
 
 function ComicViewer({image, date, title, issue, description}) {
@@ -19,7 +20,10 @@ function ComicViewer({image, date, title, issue, description}) {
               <AboutText collor={'#3E4648'} size={12} weight={900}>{title} #{issue}</AboutText>
               <AboutText collor={'#555555'} size={8} weight={600}>{description}</AboutText> 
             </Container>
-            <ReadButton>{'Read >'}</ReadButton>           
+            <ReadButton>
+              {'Read'}
+              <VectorIcon/>
+            </ReadButton>           
           </ContentWraper>
       </ContainerViewer>
   );

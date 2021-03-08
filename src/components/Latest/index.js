@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react';
 import Button from '../../components/Button'
 import ComicViewer from '../../components/ComicViewer'
 import {getLastsComics} from '../../services/lastsComics'
+import ShowContent from '../ShowContent';
 import {
   Container,
   Wraper,
@@ -10,7 +11,7 @@ import {
 } from './styles'
 
 
-function Latest() {
+function Latest({setSeeAll}) {
 
   const [comics, setComics] = useState({})
   const [limit, setLimit] = useState('4')
@@ -21,11 +22,7 @@ function Latest() {
        setComics(response.data)     
      }
      fetchLastsComics()
-  },[limit])
-
-  function handleClick(){
-    setLimit('10')
-  }
+  },[limit,])
 
   return (
     <Container>
@@ -33,7 +30,7 @@ function Latest() {
         <LastComics>
           Last Comics
         </LastComics>
-        <Button bkcolor={'#0277BD'} color={'#FFFFFF'} text={'See All'} handleClick={handleClick}/>
+        <Button bkcolor={'#0277BD'} color={'#FFFFFF'} text={'See All'} handleClick={setSeeAll}/>
       </Wraper>
       <Updates > 
         {
@@ -48,8 +45,9 @@ function Latest() {
           />)
         }       
       </Updates>
-    </Container>
+    </Container>  
   );
+  
 }
 
 export default Latest;

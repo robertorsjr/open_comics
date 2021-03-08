@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Search from '../../components/Search';
 import ShowLast from '../../components/ShowLast'
 import Menu from '../../components/Menu';
