@@ -20,6 +20,6 @@ export const TextButton = styled.span`
   line-height: 16px;
   text-align:center;
   margin: 8px;
-  color: ${({collor}) => collor};
+  color: ${({color}) => color};
   cursor:pointer;
 `

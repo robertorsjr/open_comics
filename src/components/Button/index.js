@@ -1,10 +1,10 @@
 import React from 'react';
 import {Btn, TextButton} from './styles'
 
-function Button({text, collor, bkcolor, hendleClick}) {
+function Button({text, color, bkcolor, handleClick}) {
   return (
-      <Btn bkcolor={bkcolor} onClick={()=> hendleClick()}>
-        <TextButton collor={collor}>{text}</TextButton>
+      <Btn bkcolor={bkcolor} onClick={()=> handleClick()}>
+        <TextButton color={color}>{text}</TextButton>
       </Btn>
   );
 }

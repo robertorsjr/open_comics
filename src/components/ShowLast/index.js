@@ -7,16 +7,13 @@ import {
   ShowDescription
 } from './styles'
 
-function ShowLast({title, issue, subtitle, description, hendleClick }) {
+function ShowLast({title, issue, subtitle, description, handleClick }) {
   return(
     <ShowBox >
-      {
-        issue ? <ShowTitle >{title} #{ issue}</ShowTitle>
-        : <ShowTitle>{title}</ShowTitle>
-      }
-      <ShowSubTitle>{subtitle && subtitle}</ShowSubTitle>
-      <ShowDescription>{description && description} </ShowDescription>
-      <Button bkcolor={'#FFFFFF'} collor={'#0277BD'} text={'Read'} hendleClick={hendleClick}/>  
+      <ShowTitle >{title}{issue ? ` #${issue}`  : ''}</ShowTitle>  
+      { subtitle && <ShowSubTitle>{subtitle}</ShowSubTitle> }
+      { description && <ShowDescription>{description} </ShowDescription> }
+      <Button bkcolor={'#FFFFFF'} color={'#0277BD'} text={'Read'} handleClick={handleClick}/>  
     </ShowBox>
   );
 }

@@ -20,13 +20,13 @@ function Movies() {
      fetchMovies()
   },[limit])
 
-  function hendleClick(){
+  function handleClick(){
     setLimit('1')
   }
 
   return (
     <Container>
-        <Header items={movie} hendleClick={hendleClick}/>
+        <Header items={movie} handleClick={handleClick}/>
         <Content>
           <Wrapper>
             {

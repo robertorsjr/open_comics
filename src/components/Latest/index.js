@@ -23,7 +23,7 @@ function Latest() {
      fetchLastsComics()
   },[limit])
 
-  function hendleClick(){
+  function handleClick(){
     setLimit('10')
   }
 
@@ -33,7 +33,7 @@ function Latest() {
         <LastComics>
           Last Comics
         </LastComics>
-        <Button bkcolor={'#0277BD'} collor={'#FFFFFF'} text={'See All'} hendleClick={hendleClick}/>
+        <Button bkcolor={'#0277BD'} color={'#FFFFFF'} text={'See All'} handleClick={handleClick}/>
       </Wraper>
       <Updates > 
         {

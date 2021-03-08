@@ -15,12 +15,12 @@ function NewComics() {
      fetchComics()
   },[limit])
 
-  function hendleClick(){
+  function handleClick(){
     setLimit('1')
   }
   return (
     <Container>
-      <Header items={comics} hendleClick={hendleClick}/>
+      <Header items={comics} handleClick={handleClick}/>
       <Content/>
     </Container>
   );

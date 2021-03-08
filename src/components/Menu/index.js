@@ -5,8 +5,6 @@ import { Link, useLocation } from 'react-router-dom'
 function Menu() {
   let location = useLocation();
 
-  useEffect(()=>[location])
-
   return (
     <Navigator>
       <Wrapper>

@@ -14,11 +14,9 @@ import {
   Opacity
 } from './styles'
 
-function Header({ items, hendleClick}) {
+function Header({ items, handleClick}) {
 
   let location = useLocation();
-
-  useEffect(()=>[location])
 
   return (
     <>
@@ -37,29 +35,20 @@ function Header({ items, hendleClick}) {
                 <Search/>
               </Row>
               {
-                location.pathname === '/' &&  
+                (location.pathname === '/' || location.pathname === '/newcomics') ?   
                 <ShowLast 
-                  hendleClick={hendleClick}
+                  handleClick={handleClick}
                   title={item.volume.name }
                   issue={item.issue_number}
                   subtitle={item.name}
                   description={item.description}
                 />
-              }
-              {
-                location.pathname === '/newcomics' && 
-                <ShowLast 
-                  hendleClick={hendleClick}
-                  title={item.volume.name }
-                  issue={item.issue_number}
-                  subtitle={item.name}
-                  description={item.description}
-                />
+                : null
               }
               {
                 location.pathname === '/movies' &&
                 <ShowLast 
-                  hendleClick={hendleClick}
+                  hendleClick={handleClick}
                   title={item.name }
                   subtitle={item.deck}
                   description={item.description}
