@@ -1,4 +1,5 @@
 import React from 'react';
+import dayjs from 'dayjs';
 import {
   ContainerViewer,
   ImgViewer,
@@ -14,7 +15,7 @@ function ComicViewer({image, date, title, issue, description}) {
           <ImgViewer image={image}/>
           <ContentWraper>
             <Container>
-              <AboutText collor={'#888888'} size={8}>{date}</AboutText>
+              <AboutText collor={'#888888'} size={8}>{dayjs(date).format('DD/MM/YYYY')}</AboutText>
               <AboutText collor={'#3E4648'} size={12} weight={900}>{title} #{issue}</AboutText>
               <AboutText collor={'#555555'} size={8} weight={600}>{description}</AboutText> 
             </Container>
