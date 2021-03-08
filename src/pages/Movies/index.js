@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from 'react';
-import { CartazMovie, Header, Separator } from '../../components';
-import { Container, Content, Wrapper } from './styles'
+import { Header, ShowContent } from '../../components';
+import { Container } from './styles'
 import { getMovies, getMovie} from '../../services/movies'
 
 function Movies() {
@@ -26,18 +26,8 @@ function Movies() {
 
   return (
     <Container>
-        <Header items={movie} handleClick={handleClick}/>
-        <Content>
-          <Wrapper>
-            {
-              movies.results && movies.results.map((movie, index) => 
-                <Separator y={340} x={176} key={index}>
-                  <CartazMovie item={movie}/>
-                </Separator>       
-              )
-            }
-          </Wrapper>
-        </Content>
+      <Header items={movie} handleClick={handleClick}/>
+      <ShowContent items={movies}/>
     </Container>
   );
 }

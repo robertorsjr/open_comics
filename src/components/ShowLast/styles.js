@@ -6,7 +6,6 @@ export const ShowBox = styled.div`
   justify-content: center;
   margin-left: 107px;  
 `
-
 export const ShowTitle = styled.div`
   width: 0 auto;
   height: 40px;
@@ -19,7 +18,6 @@ export const ShowTitle = styled.div`
   align-items: center;
   color: #FFFFFF;
 `
-
 export const ShowSubTitle = styled.div`
   width: 500px;
   height: 60px;
@@ -32,7 +30,6 @@ export const ShowSubTitle = styled.div`
   align-items: center;
   color: #FFFFFF;
 `
-
 export const ShowDescription = styled.div`
   width: 450px;
   height: 68px;

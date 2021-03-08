@@ -7,6 +7,7 @@ export { default as Search } from './Search'
 export { default as ShowLast } from './ShowLast'
 export { default as Menu } from './Menu'
 export { default as CartazMovie } from './CartazMovie'
+export { default as ShowContent } from './ShowContent'
 export { default as Separator } from './Separator'
 export { default as Row } from './Row'
 
