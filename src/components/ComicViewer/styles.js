@@ -1,12 +1,13 @@
 import styled from 'styled-components'
+import vector from '../../assets/icons/vector.svg'
 
 export const ContainerViewer = styled.div`
   display:flex;
   width: 252px;
   height: 166px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-right:62px; 
-  margin-bottom:49px;
+  margin-right: 62px;
+  margin-bottom: 48px;
 `
 
 export const ImgViewer = styled.div`
@@ -46,6 +47,9 @@ export const ReadButton = styled.div`
   font-weight: 600;
   font-size: 8px;
   line-height: 11px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   align-self:flex-end;
   margin-right:8px;
   margin-bottom:5px;
@@ -56,4 +60,11 @@ export const ReadButton = styled.div`
 `
 export const Container = styled.div`
 
+`
+export const VectorIcon = styled.div`
+    background-image:url(${vector});
+    background-position: center;
+    background-size: cover;
+    width: 3.13px;
+    height: 5px;
 `
