@@ -20,4 +20,7 @@ export const About = styled.span`
   line-height: 16px;
   display: flex;
   align-items: center;
+  &:hover{
+    opacity:100%;
+  }
 `

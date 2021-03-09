@@ -10,6 +10,7 @@ export const Container = styled.div`
   width: ${({y}) => y || 10}px;
   height: ${({x}) => x || 10}px;
   cursor:pointer;
+ 
 `
 export const Text = styled.div`
   font-family: 'Nunito Sans';
