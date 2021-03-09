@@ -9,8 +9,8 @@ function Movies() {
   const [movie, setMovie] = useState({})
   const [movies, setMovies] = useState({})
   const [limit, setLimit] = useState('1')
-  const [size, setSize] = useState('9')
-  const [location, setLocation] = useState(useLocation())
+  const [size] = useState('9')
+  let location = useLocation()
  
   useEffect(()=>{
      async function fetchMovies(){
@@ -20,7 +20,7 @@ function Movies() {
        setMovies(response.data)    
      }
      fetchMovies()
-  },[limit, location])
+  },[limit, location, size])
 
   function handleClick(){
     setLimit('1')

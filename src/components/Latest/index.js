@@ -2,7 +2,6 @@ import React,{useState, useEffect} from 'react';
 import Button from '../../components/Button'
 import ComicViewer from '../../components/ComicViewer'
 import {getLastsComics} from '../../services/lastsComics'
-import ShowContent from '../ShowContent';
 import {
   Container,
   Wraper,
@@ -14,7 +13,7 @@ import {
 function Latest({setSeeAll}) {
 
   const [comics, setComics] = useState({})
-  const [limit, setLimit] = useState('4')
+  const [limit]= useState('4')
 
   useEffect(()=>{
      async function fetchLastsComics(){

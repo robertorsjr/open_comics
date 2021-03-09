@@ -22,7 +22,7 @@ function ShowContent({items, location, seeAll}) {
       </Content>
     )
   }
-  if(seeAll && location == '/'){
+  if(seeAll && location === '/'){
   
     return (
       <Container>

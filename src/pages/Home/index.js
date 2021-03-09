@@ -8,9 +8,9 @@ function Home() {
 
   const [comics, setComics] = useState({})
   const [comic, setComic] = useState({})
-  const [limit, setLimit] = useState('30')
   const [seeAll, setSeeAll] = useState(false)
   let location = useLocation().pathname
+  const [limit] = useState('30')
  
   useEffect(()=>{
      async function fetchComics(){
@@ -23,13 +23,12 @@ function Home() {
   },[limit, seeAll])
 
   function handleClick(){
-    console.log('You clicked me!')
+    console.warn('You clicked me!')
   }
 
-  function switchPages(){
+  function showAll(){
     setSeeAll(true)
   }
-
 
   return (
     <Container>
@@ -38,7 +37,7 @@ function Home() {
           seeAll ? <ShowContent items={comics} location={location} seeAll={seeAll}/>:
           <>
             <HorizonScroll/>
-            <Latest setSeeAll={switchPages}/>
+            <Latest setSeeAll={showAll}/>
           </>
         }
     </Container>
