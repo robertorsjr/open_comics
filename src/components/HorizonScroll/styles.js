@@ -15,12 +15,13 @@ export const Line = styled.div`
   height: 2px;
   display:flex;
   align-items:center;
+  justify-content:${({justifyContent}) => justifyContent || 'flex-start'};
   background: rgba(196, 196, 196, 0.5);
   border-radius: 1px;
   margin-right:32px;
 `
 export const LineContent = styled.div`
-  width: 116.49px;
+  width: 185.49px;
   height: 2px;
   background:#2D3333;
   border-radius:1px;

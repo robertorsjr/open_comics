@@ -25,7 +25,7 @@ export const Opacity = styled.div`
   width: 800px;
   height: 300px;
   max-height: 300px;
-  background: rgba(48, 67, 74,.9);
+  background: rgba(52, 69, 76,.97);
   z-index:5;
 `
 export const Row = styled.div`
