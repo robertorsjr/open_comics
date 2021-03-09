@@ -7,13 +7,17 @@ import {
   ShowDescription
 } from './styles'
 
-function ShowLast({title, issue, subtitle, description, handleClick }) {
+function ShowLast({title, issue, subtitle, description, handleClick, location }) {
   return(
     <ShowBox >
       <ShowTitle >{title}{issue ? ` #${issue}`  : ''}</ShowTitle>  
       { subtitle && <ShowSubTitle>{subtitle}</ShowSubTitle> }
       { description && <ShowDescription>{description} </ShowDescription> }
-      <Button bkcolor={'#FFFFFF'} color={'#0277BD'} text={'Read'} handleClick={handleClick}/>  
+      <Button 
+        bkcolor={'#FFFFFF'} 
+        color={'#0277BD'} 
+        text={location === '/movies'? 'See more' : 'Read'} 
+        handleClick={handleClick}/>  
     </ShowBox>
   );
 }

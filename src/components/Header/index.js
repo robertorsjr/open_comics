@@ -48,6 +48,7 @@ function Header({ items, handleClick}) {
               {
                 location.pathname === '/movies' &&
                 <ShowLast 
+                  location={location.pathname}
                   hendleClick={handleClick}
                   title={item.name }
                   subtitle={item.deck}
