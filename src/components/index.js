@@ -8,6 +8,7 @@ export { default as ShowLast } from './ShowLast'
 export { default as Menu } from './Menu'
 export { default as CartazMovie } from './CartazMovie'
 export { default as ShowContent } from './ShowContent'
+export { default as ButtonLink } from './ButtonLink'
 export { default as Separator } from './Separator'
 export { default as Row } from './Row'
 

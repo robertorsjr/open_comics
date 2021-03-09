@@ -27,14 +27,14 @@ function Home() {
   }
 
   function showAll(){
-    setSeeAll(true)
+    setSeeAll(!seeAll)
   }
 
   return (
     <Container>
       <Header items={comic} hendleClick={handleClick}/>
         {
-          seeAll ? <ShowContent items={comics} location={location} seeAll={seeAll}/>:
+          seeAll ? <ShowContent items={comics} location={location} seeAll={seeAll} setSeeAll={showAll}/>:
           <>
             <HorizonScroll/>
             <Latest setSeeAll={showAll}/>

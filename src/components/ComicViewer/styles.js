@@ -34,7 +34,7 @@ export const AboutText = styled.span`
   color:${({collor})=>collor};
   min-height:14px;
   padding:3px;
-  line-height: 7px;
+  line-height: 12px;
   margin-right:19px;
   display: flex;
   align-self:flex-start;
@@ -62,9 +62,9 @@ export const Container = styled.div`
 
 `
 export const VectorIcon = styled.div`
-    background-image:url(${vector});
-    background-position: center;
-    background-size: cover;
-    width: 3.13px;
-    height: 5px;
+  background-image:url(${vector});
+  background-position: center;
+  background-size: cover;
+  width: 3.13px;
+  height: 5px;
 `
