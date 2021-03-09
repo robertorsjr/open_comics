@@ -1,6 +1,5 @@
 import React,{useState, useEffect} from 'react';
-import Button from '../../components/Button'
-import ComicViewer from '../../components/ComicViewer'
+import { Button, ComicViewer } from '../../components'
 import {getLastsComics} from '../../services/lastsComics'
 import {
   Container,
@@ -8,7 +7,6 @@ import {
   LastComics,
   Updates
 } from './styles'
-
 
 function Latest({setSeeAll}) {
 
@@ -33,20 +31,20 @@ function Latest({setSeeAll}) {
       </Wraper>
       <Updates > 
         {
-        comics.results && comics.results.map((comic, index) => 
-          <ComicViewer 
-            key={index}
-            image={comic.image.original_url}
-            date={comic.cover_date}
-            title={comic.volume.name}
-            issue={comic.issue_number}
-            description={comic.name}
-          />)
+          comics.results && comics.results.map((comic, index) => 
+            <ComicViewer 
+              key={index}
+              image={comic.image.original_url}
+              date={comic.cover_date}
+              title={comic.volume.name}
+              issue={comic.issue_number}
+              description={comic.name}
+            />
+          )
         }       
       </Updates>
     </Container>  
   );
-  
 }
 
 export default Latest;

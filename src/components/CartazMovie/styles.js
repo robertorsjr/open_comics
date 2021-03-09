@@ -7,7 +7,6 @@ export const Container = styled.div`
   cursor:pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
-
 export const Wrapper = styled.div`
   padding: 13px 20px;
   position:absolute;
@@ -19,7 +18,6 @@ export const Wrapper = styled.div`
   flex-direction:column; 
   border-radius: 4px; 
 `
-
 export const BackImage = styled.div`
   position: absolute;
   width: 173px;
@@ -32,7 +30,6 @@ export const BackImage = styled.div`
   z-index:2;
   border-radius: 4px;
 `
-
 export const Opacity = styled.div`
   position:absolute;
   width: 173px;
@@ -48,7 +45,6 @@ export const Relesed = styled.span`
   line-height: 10px;
   color: #CCCCCC;
 `
-
 export const Title = styled.span`
   font-family: 'Nunito Sans';
   font-style: normal;
@@ -57,7 +53,6 @@ export const Title = styled.span`
   line-height: 16px;
   color:#FFFFFF;
 `
-
 export const Description = styled.span`
   font-family: 'Nunito Sans';
   font-style: normal;
@@ -66,7 +61,6 @@ export const Description = styled.span`
   line-height: 8px;
   color: #FFFFFF;
 `
-
 export const About = styled.div`
   display:flex;
   justify-content:space-between;

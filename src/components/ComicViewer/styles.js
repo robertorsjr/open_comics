@@ -9,14 +9,12 @@ export const ContainerViewer = styled.div`
   margin-right: 62px;
   margin-bottom: 48px;
 `
-
 export const ImgViewer = styled.div`
   background-image: ${({image})=> `url(${image})`};
   background-size:cover;
   height:166px;
   width:127px;
 `
-
 export const ContentWraper = styled.div`
   padding-top:17px;
   padding-left:12px;
@@ -26,7 +24,6 @@ export const ContentWraper = styled.div`
   flex-direction:column;
   justify-content:space-between;// temporario.
 `
-
 export const AboutText = styled.span`
   font-family: 'Nunito Sans';
   font-size: ${({size}) => size}px;
@@ -40,7 +37,6 @@ export const AboutText = styled.span`
   align-self:flex-start;
   justify-content:space-between;
 `
-
 export const ReadButton = styled.div`
   font-family: 'Nunito Sans';
   font-style: normal;

@@ -33,13 +33,13 @@ function Home() {
   return (
     <Container>
       <Header items={comic} hendleClick={handleClick}/>
-        {
-          seeAll ? <ShowContent items={comics} location={location} seeAll={seeAll} setSeeAll={showAll}/>:
-          <>
-            <HorizonScroll/>
-            <Latest setSeeAll={showAll}/>
-          </>
-        }
+      {
+        seeAll ? <ShowContent items={comics} location={location} seeAll={seeAll} setSeeAll={showAll}/>:
+        <>
+          <HorizonScroll/>
+          <Latest setSeeAll={showAll}/>
+        </>
+      }
     </Container>
   );
 }

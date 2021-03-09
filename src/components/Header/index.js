@@ -1,8 +1,10 @@
 import React from 'react';
-import Search from '../../components/Search';
-import ShowLast from '../../components/ShowLast'
-import Menu from '../../components/Menu';
-import Separator from '../../components/Separator'
+import {
+  Search,
+  ShowLast,
+  Menu,
+  Separator 
+} from '../../components';
 import { useLocation } from 'react-router-dom'
 import {
   Container,

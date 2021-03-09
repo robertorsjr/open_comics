@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react';
-import ComicViewer from '../../components/ComicViewer'
+import { ComicViewer } from '../../components'
 import {getBatman} from '../../services/batman'
 import {
   Container,

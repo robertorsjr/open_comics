@@ -13,7 +13,6 @@ export const SearchContainer = styled.div`
   align-items: center;
   justify-content: center;
 `
-
 export const SearchInput = styled.input`
   width: 88px;
   height: 12px;
@@ -38,8 +37,6 @@ export const SearchInput = styled.input`
     color:#000000;
   }
 `
-
 export const Icon = styled(FontAwesomeIcon)`
   margin-left: 7px;
-  
 `

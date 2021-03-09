@@ -1,7 +1,5 @@
 import React from "react";
-import Home from '../pages/Home'
-import Movies from '../pages/Movies'
-import NewComics from '../pages/NewComics'
+import { Home, Movies, NewComics } from '../pages'
 import {
   Switch,
   Route,

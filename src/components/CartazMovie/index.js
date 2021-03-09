@@ -20,7 +20,7 @@ function CartazMovie({ item }) {
         <About>
           {
             item.release_date &&  
-              <Relesed>Released date: {dayjs(item.release_date).format('DD/MM/YYYY')}</Relesed>
+            <Relesed>Released date: {dayjs(item.release_date).format('DD/MM/YYYY')}</Relesed>
           }
         </About> 
         <About>

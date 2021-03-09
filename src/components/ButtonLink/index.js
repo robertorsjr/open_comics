@@ -6,8 +6,7 @@ function ButtonLink({click , size, text, color, y, x}) {
     <Container onClick={()=>click && click()} y={y} x={x}>
       <Text size={size} color={color}>{text}</Text>
       <VectorIcon  y={size} x={size}/>
-    </Container>
-      
+    </Container>   
   );
 }
 

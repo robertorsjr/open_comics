@@ -1,14 +1,15 @@
 import React from 'react';
-import CartazMovie from '../../components/CartazMovie'
-import ComicViewer from '../../components/ComicViewer'
-import Separator from '../../components/Separator'
-import ButtonLink from '../../components/ButtonLink'
+import {
+  CartazMovie,
+  ComicViewer,
+  Separator,
+  ButtonLink 
+} from '../../components'
 import { Content, Wrapper, Container, ShowAll } from './styles';
 
 function ShowContent({items, location, seeAll, setSeeAll}) {
 
   if(location === '/movies'){
-  
     return (
       <Content>
         <Wrapper>
