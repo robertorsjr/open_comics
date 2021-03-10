@@ -19,7 +19,7 @@ export const SearchInput = styled.input`
   font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: normal;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 11px;
   display: flex;
   align-items: center;

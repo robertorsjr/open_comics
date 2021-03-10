@@ -21,7 +21,7 @@ export const Line = styled.div`
   margin-right:32px;
 `
 export const LineContent = styled.div`
-  width: 185.49px;
+  width: 116.49px;
   height: 2px;
   background:#2D3333;
   border-radius:1px;

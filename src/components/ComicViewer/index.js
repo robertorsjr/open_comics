@@ -1,13 +1,12 @@
 import React from 'react';
 import dayjs from 'dayjs';
+import { ButtonLink } from '../../components'
 import {
   ContainerViewer,
   ImgViewer,
   ContentWraper,
   AboutText,
   Container,
-  ReadButton,
-  VectorIcon
 } from './styles'
 
 function ComicViewer({image, date, title, issue, description}) {
@@ -20,10 +19,13 @@ function ComicViewer({image, date, title, issue, description}) {
           <AboutText collor={'#3E4648'} size={12} weight={900}>{title} #{issue}</AboutText>
           <AboutText collor={'#555555'} size={8} weight={600}>{description}</AboutText> 
         </Container>
-        <ReadButton>
-          {'Read'}
-        <VectorIcon/>
-        </ReadButton>           
+        <ButtonLink
+          x={14}
+          y={33}
+          text={'Read'}
+          size={8}
+          color={'#0277BD'}
+        />           
       </ContentWraper>
     </ContainerViewer>
   );

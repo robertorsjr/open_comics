@@ -2,15 +2,14 @@ import styled from 'styled-components'
 import vector from '../../assets/icons/vector.svg'
 
 export const Container = styled.div`
-  position:absolute;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  flex-direction:row-reverse;
+  align-self:flex-end;
+  flex-direction:${({direction}) => direction};
   width: ${({y}) => y || 10}px;
   height: ${({x}) => x || 10}px;
   cursor:pointer;
- 
 `
 export const Text = styled.div`
   font-family: 'Nunito Sans';
@@ -24,8 +23,8 @@ export const VectorIcon = styled.div`
   background-image:url(${vector});
   background-position: center;
   background-size: cover;
-  width: ${({x}) => x}px;
-  height:${({y}) => y}px;
+  width: ${({x}) => x-3}px;
+  height:${({y}) => y-2}px;
   margin:4px;
-  transform:rotate(180deg);
+  transform: rotate(${({rotate}) => rotate || 0}deg);
 `

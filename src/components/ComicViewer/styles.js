@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import vector from '../../assets/icons/vector.svg'
-
 export const ContainerViewer = styled.div`
   display:flex;
   width: 252px;
@@ -16,8 +14,7 @@ export const ImgViewer = styled.div`
   width:127px;
 `
 export const ContentWraper = styled.div`
-  padding-top:17px;
-  padding-left:12px;
+  padding:17px 3px 5px 12px;
   display:flex;
   max-height: 166px;
   width: 125px;
@@ -37,30 +34,6 @@ export const AboutText = styled.span`
   align-self:flex-start;
   justify-content:space-between;
 `
-export const ReadButton = styled.div`
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 8px;
-  line-height: 11px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  align-self:flex-end;
-  margin-right:8px;
-  margin-bottom:5px;
-  width: 27.12px;
-  height: 14px;
-  color: #0277BD;
-  cursor:pointer;
-`
 export const Container = styled.div`
 
-`
-export const VectorIcon = styled.div`
-  background-image:url(${vector});
-  background-position: center;
-  background-size: cover;
-  width: 3.13px;
-  height: 5px;
 `

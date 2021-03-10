@@ -30,11 +30,13 @@ function ShowContent({items, location, seeAll, setSeeAll}) {
       <Container>
         <ButtonLink 
         click={setSeeAll}
+        direction={'row-reverse'}
         y={55}
         x={40}
         size={15}
         text={'Home'}
         color={'#0277BD'}
+        rotate={180}
         />
         <ShowAll padding={60}>
           {   
