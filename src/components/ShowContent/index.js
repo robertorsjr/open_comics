@@ -38,10 +38,10 @@ function ShowContent({items, location, seeAll, setSeeAll}) {
         color={'#0277BD'}
         rotate={180}
         />
-        <ShowAll padding={60}>
+        <ShowAll padding={40}>
           {   
             items.results && items.results.map((comic, index) => 
-              <Separator y={223} x={290} key={index}>
+              <Separator y={223} x={340} key={index}>
                 <ComicViewer 
                   key={index}
                   image={comic.image.original_url}
