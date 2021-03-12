@@ -1,12 +1,12 @@
 import api,{endpoints} from './index'
 
-export async function getMovies(size){
+export async function getMovies(limit){
     const { get } = await api
-    return get(endpoints.movies(size))
+    return get(endpoints.movies(limit))
 };
 
-export async function getMovie(limit){
+export async function getMovie(){
     const { get } = await api
-    return get(endpoints.movie(limit))
+    return get(endpoints.movie)
 };
 

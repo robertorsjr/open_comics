@@ -1,6 +1,7 @@
-import React,{useState, useEffect} from 'react';
+import React,{useEffect} from 'react';
 import { Button, ComicViewer } from '../../components'
-import {getLastsComics} from '../../services/lastsComics'
+import { useDispatch, useSelector } from 'react-redux';
+import { requestLastsComics } from '../../store/ducks/lastsComics';
 import {
   Container,
   Wraper,
@@ -10,16 +11,13 @@ import {
 
 function Latest({setSeeAll}) {
 
-  const [comics, setComics] = useState({})
-  const [limit]= useState('4')
+  const data = useSelector(({ lastsComicsState }) => lastsComicsState.data)
+  const dispatch = useDispatch()
+  const limit = 4 
 
   useEffect(()=>{
-     async function fetchLastsComics(){
-       const response = await getLastsComics(limit)
-       setComics(response.data)     
-     }
-     fetchLastsComics()
-  },[limit,])
+    dispatch(requestLastsComics(limit))
+  },[dispatch])
 
   return (
     <Container>
@@ -31,7 +29,7 @@ function Latest({setSeeAll}) {
       </Wraper>
       <Updates > 
         {
-          comics.results && comics.results.map((comic, index) => 
+          data.results && data.results.map((comic, index) => 
             <ComicViewer 
               key={index}
               image={comic.image.original_url}
