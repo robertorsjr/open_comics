@@ -1,6 +1,7 @@
-import React,{useEffect, useState} from 'react';
+import React,{ useEffect } from 'react';
 import { ComicViewer } from '../../components'
-import {getBatman} from '../../services/batman'
+import { useDispatch, useSelector } from 'react-redux';
+import { requestFilter } from '../../store/ducks/filter';
 import {
   Container,
   Row,
@@ -11,16 +12,15 @@ import {
 } from './styles'
 
 function HorizonScroll() {
+  const data = useSelector(({ filterState }) => filterState.data)
+  const dispatch = useDispatch()
 
-  const [batman, setBatman] = useState({})
+  const comics = 'batman'
+  const limit = 10
 
-  useEffect(()=>{
-     async function fetchComicBatman(){
-       const response = await getBatman()
-       setBatman(response.data)
-     }
-     fetchComicBatman()
-  },[])
+  useEffect(() => {
+    dispatch(requestFilter(limit, comics))
+  }, [dispatch])
 
   return (
     <Container>
@@ -34,7 +34,7 @@ function HorizonScroll() {
       </Row>
       <ComicContent>
         {
-          batman.results && batman.results.map((comic, index) =>
+          data.results && data.results.map((comic, index) =>
             <ComicViewer 
               key={index}
               image={comic.image.original_url}
