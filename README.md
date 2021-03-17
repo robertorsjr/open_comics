@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Find your favorite comics and movies. Built with ReactJS | JavaScript | Styled Components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![opencomics](https://user-images.githubusercontent.com/71423080/111428665-907a7580-86d6-11eb-8ce3-26894f27ba5c.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+# :checkered_flag: Getting Started
 
-### `yarn start`
+```
+# open your terminal/cmd and clone this repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+git clone https://github.com/robertorsjr/open_comics.git
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# access folder open_comics
 
-### `yarn test`
+cd open_comics
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# install dependencies using your favorite package manager
 
-### `yarn build`
+yarn
+# or with NPM usign npm install
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# run app typing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+yarn start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#or with NPM
 
-### `yarn eject`
+npm run start
+```
+**The app should open on "http://localhost:3000" 🎉🎉🎉**
+#
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# :pick: Built Using
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [ReactJS](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwie4-3NjZPpAhU7EbkGHRGZBoQQFjAAegQIExAC&url=https%3A%2F%2Fpt-br.reactjs.org%2F&usg=AOvVaw3IQxnDAV4OTuyk7FEN--qA) - UI library
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [Styled Components](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwj5n6jJjZPpAhV6LLkGHed1B80QFjAAegQIBxAC&url=https%3A%2F%2Fwww.styled-components.com%2F&usg=AOvVaw0J6heqwwkbKYNkr_2e7jIU) - CSS in JS library
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [Axios](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwjcm422jZPpAhXlH7kGHYk4AK8QFjAAegQIAxAB&url=https%3A%2F%2Fgithub.com%2Faxios%2Faxios&usg=AOvVaw266wVW3XPRY46nOw2ULXdh) - Http requests
 
-## Learn More
+- [React Router DOM](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwjEvujUjZPpAhVJIbkGHaNUDdEQFjAAegQIAhAB&url=https%3A%2F%2Freacttraining.com%2Freact-router%2Fweb&usg=AOvVaw39MVbEMEQCl6DDWEkh8tYs) - Navigation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Redux](https://redux.js.org/introduction/getting-started) - A Predictable State Container for JS Apps
+#
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# :tada: Acknowledgements
 
-### Code Splitting
+- [Dev Robson Gil Rocha](https://github.com/RobsonGilRocha)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Dev Edmar Rafael](https://github.com/Edmar-Rafael)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Dev/Mentor/Autor/Designer  Alan de Oliveira Quadros](https://github.com/AlanQuadros)
